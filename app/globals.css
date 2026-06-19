@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f7fbff;
+  color: #0e1726;
+}
+
+::selection {
+  background: #f5b027;
+  color: #0e1726;
+}
+
+.focus-ring {
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-gold;
+}
+
+.section {
+  @apply mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8;
+}
+
+.card {
+  @apply rounded-lg border border-brand-line bg-white shadow-sm;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
